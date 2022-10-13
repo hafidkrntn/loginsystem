@@ -1,0 +1,97 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "Abdul Rohim Tantio",
+    "email" : "abdul@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+// get all user
+GET http://localhost:5000/users
+
+###
+// get single user
+GET http://localhost:5000/users/91c4b982-9bb0-4cdb-8bae-23809a4c954b
+
+###
+// update user
+PATCH http://localhost:5000/users/4b1140bc-0a61-4431-8d87-f2904b704fea
+Content-Type: application/json
+
+{
+    "name" : "Abdul Rohim Tantio up",
+    "email" : "abdulro@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+// delete user
+DELETE http://localhost:5000/users/4b1140bc-0a61-4431-8d87-f2904b704fea
+
+###
+// login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+// login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "rifa@gmail.com",
+    "password": "123456"
+}
+
+###
+// GET ME
+GET http://localhost:5000/me
+
+###
+// LOGOUT USER / ADMIN
+DELETE http://localhost:5000/logout
+
+
+###
+// get all product
+GET http://localhost:5000/products
+
+###
+// get single product
+GET http://localhost:5000/products/c0a0198f-e33f-49ff-aabd-7b764d05a59b
+
+###
+// post data product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name" : "Product 6",
+    "price": 1002
+}
+
+
+###
+// update data product
+PATCH http://localhost:5000/products/6dfccb2b-fe6f-4d25-a85d-6e3c187fbbd3
+Content-Type: application/json
+
+{
+    "name" : "Product 7",
+    "price": 1003
+}
+
+###
+// delete data product
+DELETE http://localhost:5000/products/
